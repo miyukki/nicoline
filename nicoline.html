@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>NICOLINE</title>
+	<style>
+	* {
+		padding; 0;
+		margin: 0;
+	}
+	
+	p, span, input, h1, h2, h3, h4 {
+		font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Osaka', sans-serif;
+	}
+	
+	body {
+		width: 100%;
+		height: 100%;
+		background-image: url(data:image/gif;base64,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);
+	}
+	
+	.sticky {
+		position: fixed;
+		
+		width: 300px;
+		padding: 10px;
+		background-color: #FFF;
+		border: solid 1px #CCC;
+		border-radius: 3px;
+		box-shadow: #333333 0 5px 30px -10px;
+		-webkit-transform: scale(0.0);
+		
+		-webkit-animation-name: sticky_move;
+		-webkit-animation-duration: 10s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-direction: normal;
+		-webkit-animation-play-state: running;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-delay: 0;
+		cursor: pointer;
+	}
+	
+	.sticky:hover {
+		z-index: 999;
+		-webkit-animation-play-state: paused;
+	}
+	
+	.sticky_left {
+		float: left;
+	}
+	
+	.sticky_image {
+		margin-right: 5px;
+	}
+	
+	.sticky_badge {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background-color: #222;
+	}
+	
+	.sticky_right {
+		margin-left: 5px;
+		width: auto;
+		overflow:hidden;
+		zoom:1;
+	}
+	
+	.sticky_title {
+		display: block;
+		word-break: break-all;
+		font-size: 13px;
+		color: #888;
+	}
+	
+	.sticky_comment {
+		word-break: break-all;
+		font-size: 18px;
+		color: #222;
+	}
+	
+	.sticky_count {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		word-break: break-all;
+		font-size: 10px;
+		color: #888;
+	}
+	
+	.sticky_count:after {
+		content: '回';
+	}
+	
+	.sticky_end {
+		clear: both;
+	}
+	
+	@-webkit-keyframes sticky_move {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.8);
+		}
+		6% {
+			opacity: 1;
+			-webkit-transform: scale(1.0);
+		}
+		96% {
+			opacity: 1;
+			-webkit-transform: scale(1.0);
+		}
+		100% {
+			opacity: 0;
+			-webkit-transform: scale(0.8);
+		}
+	}
+	</style>
+	<script src="http://sakura.nicocast.com:2525/socket.io/socket.io.js"></script>
+	<script>
+	var socket = io.connect('http://sakura.nicocast.com:2525');
+	socket.on('posted', function (res) {
+		if(res.data.is_retweet) return;
+		console.log(res.data);
+		createSticky('http://nico.ms/' + res.data.vid, res.data.thumbnail_url, res.data.length, res.data.title, res.data.comment, res.data.count, res.data.mostcount)
+	});
+	</script>
+	<script>
+	var stickyCount = 0;
+	var createSticky = function(link_url, image_url, badge_text, title, comment, count, mostcount) {
+		if(stickyCount>=20) {
+			return;
+		}
+		stickyCount++;
+		
+		var sticky_left = document.createElement('div');
+		sticky_left.className = 'sticky_left';
+		
+		var sticky_image = document.createElement('img');
+		sticky_image.className = 'sticky_image';
+		sticky_image.src = image_url;
+		sticky_left.appendChild(sticky_image);
+		
+		/*
+		var sticky_badge = document.createElement('span');
+		sticky_badge.className = 'sticky_badge';
+		sticky_badge.textContent = badge_text;
+		sticky_left.appendChild(sticky_badge);
+		*/
+		
+		var sticky_right = document.createElement('div');
+		sticky_right.className = 'sticky_right';
+		
+		var sticky_title = document.createElement('span');
+		sticky_title.className = 'sticky_title';
+		sticky_title.textContent = title;
+		sticky_right.appendChild(sticky_title);
+		
+		var sticky_comment = document.createElement('span');
+		sticky_comment.className = 'sticky_comment';
+		sticky_comment.textContent = comment.length>30?comment.substring(0, 30) + '...':comment;
+		sticky_right.appendChild(sticky_comment);
+		
+		var sticky_count = document.createElement('span');
+		sticky_count.className = 'sticky_count';
+		sticky_count.textContent = count;
+		sticky_right.appendChild(sticky_count);
+		
+		var sticky_end = document.createElement('div');
+		sticky_end.className = 'sticky_end';
+		
+		var board = document.getElementById('board');
+		var sticky = document.createElement('div');
+		sticky.className = 'sticky';
+		sticky.style.top = getRandomHeight(-211-20) + 'px';
+		sticky.style.left = getRandomWidth(-322-20) + 'px';
+		if(window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+			sticky.addEventListener('webkitAnimationEnd', function() {
+				board.removeChild(sticky);
+				stickyCount--;
+			});
+		}else{
+			setTimeout(function() {
+				board.removeChild(sticky);
+				stickyCount--;
+			}, 10 * 1000);
+		}
+		sticky.appendChild(sticky_left);
+		sticky.appendChild(sticky_right);
+		sticky.appendChild(sticky_end);
+		sticky.onclick = function(){window.open(link_url)};
+		if(window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+			sticky.style.zoom = (120 - (120-50) * (count / (mostcount+1))) + '%';
+		}else{
+			sticky.style.WebkitTransform = 'scale(' + ((120 - (120-50) * (count / (mostcount+1)))*1.0/100) + ')';
+			sticky.style.MozTransform = 'scale(' + ((120 - (120-50) * (count / (mostcount+1)))*1.0/100) + ')';
+		}
+		board.appendChild(sticky);
+	}
+	
+	var getRandomHeight = function(factor) {
+		var width = window.innerHeight + factor;
+		width = Math.floor( Math.random() * width );
+		return width;
+	}
+	
+	var getRandomWidth = function(factor) {
+		var width = window.innerWidth + factor;
+		width = Math.floor( Math.random() * width );
+		return width;
+	}
+	</script>
+</head>
+<body>
+	<div id="board">
+	</div>
+</body>
+</html>
