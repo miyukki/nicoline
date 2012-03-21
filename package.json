@@ -1,0 +1,10 @@
+{
+	 "name": "nicoline"
+	,"version": "0.0.1"
+	,"private": true
+	,"dependencies": {
+		 "redis": ">=0.7.1"	 
+		,"socket.io": ">=0.8.7"
+		,"twitter-stream": ">=0.2.0"
+	}
+}

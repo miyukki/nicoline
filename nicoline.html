@@ -3,6 +3,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>NICOLINE</title>
+	<script src="http://*********/socket.io/socket.io.js"></script>
+	<script>
+	var socket = io.connect('http://********');
+	socket.on('posted', function (res) {
+		if(res.data.is_retweet) return;
+		console.log(res.data);
+		createSticky('http://nico.ms/' + res.data.vid, res.data.thumbnail_url, res.data.length, res.data.title, res.data.comment, res.data.count, res.data.mostcount)
+	});
+	</script>
 	<style>
 	* {
 		padding; 0;
@@ -116,15 +125,6 @@
 		}
 	}
 	</style>
-	<script src="http://sakura.nicocast.com:2525/socket.io/socket.io.js"></script>
-	<script>
-	var socket = io.connect('http://sakura.nicocast.com:2525');
-	socket.on('posted', function (res) {
-		if(res.data.is_retweet) return;
-		console.log(res.data);
-		createSticky('http://nico.ms/' + res.data.vid, res.data.thumbnail_url, res.data.length, res.data.title, res.data.comment, res.data.count, res.data.mostcount)
-	});
-	</script>
 	<script>
 	var stickyCount = 0;
 	var createSticky = function(link_url, image_url, badge_text, title, comment, count, mostcount) {
@@ -140,13 +140,6 @@
 		sticky_image.className = 'sticky_image';
 		sticky_image.src = image_url;
 		sticky_left.appendChild(sticky_image);
-		
-		/*
-		var sticky_badge = document.createElement('span');
-		sticky_badge.className = 'sticky_badge';
-		sticky_badge.textContent = badge_text;
-		sticky_left.appendChild(sticky_badge);
-		*/
 		
 		var sticky_right = document.createElement('div');
 		sticky_right.className = 'sticky_right';
